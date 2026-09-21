@@ -1,41 +1,196 @@
-Privacy Policy
-Sortd  ·  Last updated: June 2025
-Sortd is designed from the ground up to keep your personal information private. Your data lives on your device. We don't run servers that store your entries, we don't sell your data, and we don't show you ads.
-What information Sortd stores
-Sortd stores everything you add — entries, dates, notes, and photos — locally on your device. This data never passes through our servers. It is saved to your iPhone's private app storage and is not accessible to other apps.
-If you enable iCloud sync (a Pro feature), your data is synced through your personal Apple iCloud account using Apple's CloudKit infrastructure. This is governed by Apple's Privacy Policy. We never have access to this data.
-The AI document scanner
-When you scan a document, here is exactly what happens:
-	•	Your camera captures an image. That image never leaves your device.
-	•	Apple's on-device Vision framework reads the text from the image. This happens entirely on your iPhone, with no network connection.
-	•	The extracted text (not the image) is sent to the Anthropic API, which identifies what kind of document it is and suggests how to file it.
-	•	The result is returned to your app. The text is not stored or used for training by Anthropic.
-Anthropic's API terms explicitly state that data submitted via the API is not used to train their models. You can read their policy at anthropic.com/legal/privacy.
-Family sharing
-If you use Sortd's family sharing feature (Pro), your entries are synced with your household via Apple CloudKit shared containers. Family members must be invited and must accept the invitation before they can see any shared entries.
-When creating or editing any entry, you can mark it as Private. Private entries are stored only on your device and are never included in family sync — not even when family mode is turned on. The lock icon on an entry means only you can see it.
-We do not operate a family-sharing server. All sync runs through Apple's infrastructure under your Apple ID.
-Notifications
-Sortd can send you local notifications to remind you about upcoming dates and renewals. These notifications are generated entirely on your device and are never sent to or processed by an external server. You can turn notifications off at any time in your iPhone's Settings app.
-What we do not collect
-	•	We do not collect analytics or usage data.
-	•	We do not use advertising or tracking SDKs of any kind.
-	•	We do not require you to create an account to use the app.
-	•	We do not have access to your entries, notes, photos, or scanned documents.
-	•	We do not sell, share, or monetise your personal information in any way.
-In-app purchases
-Sortd offers a one-time Pro upgrade purchase. This transaction is processed entirely by Apple through the App Store. We receive confirmation that a purchase was made, but we do not receive your payment details, name, or any financial information. This is handled entirely by Apple under their own privacy policy.
-Children's privacy
-Sortd is rated 4+ and contains no content inappropriate for children. We do not knowingly collect any personal data from anyone. Because all data is stored locally on the device, there is no data collection that would affect children differently from any other user.
-Data deletion
-You can delete all of your Sortd data at any time by going to Settings within the app and tapping "Delete account & all data". This removes everything from your device. If you have iCloud sync enabled, you can also delete the iCloud data from your iPhone's Settings → Apple ID → iCloud → Manage Storage.
-Uninstalling the app from your iPhone will also remove all locally stored data.
-Third-party services
-Sortd uses two third-party services:
-	•	Anthropic Claude API — used only during document scanning to classify extracted text. Anthropic Privacy Policy
-	•	Apple CloudKit / iCloud — used for optional sync and family sharing. Apple Privacy Policy
-Changes to this policy
-If we make material changes to this privacy policy, we will update the date at the top of this page. We encourage you to check this page periodically. Continued use of Sortd after changes are posted means you accept the updated policy.
-Contact
-If you have any questions about this privacy policy or how Sortd handles your data, please contact us at: max.michalski@icloud.com
-© 2025 Sortd. All rights reserved.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Sortd</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #1a1a1a;
+      background: #fff;
+      padding: 0 16px;
+    }
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 56px 0 80px;
+    }
+    .app-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 48px;
+    }
+    .app-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 20px;
+      letter-spacing: -1px;
+    }
+    .app-name {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1a1a1a;
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+      color: #1a1a1a;
+    }
+    .updated {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-top: 40px;
+      margin-bottom: 12px;
+    }
+    p {
+      color: #333;
+      margin-bottom: 14px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 14px;
+    }
+    ul li {
+      color: #333;
+      padding: 4px 0 4px 20px;
+      position: relative;
+    }
+    ul li::before {
+      content: "•";
+      position: absolute;
+      left: 6px;
+      color: #888;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    .footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid #e8e8e8;
+      font-size: 14px;
+      color: #888;
+    }
+    .footer a { color: #888; }
+    hr {
+      border: none;
+      border-top: 1px solid #f0f0f0;
+      margin: 40px 0;
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 26px; }
+      h2 { font-size: 16px; }
+      body { font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="app-header">
+      <div class="app-icon">S</div>
+      <span class="app-name">Sortd</span>
+    </div>
+
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: September 2026</p>
+
+    <h2>Data Controller</h2>
+    <p>Sortd is operated by Max Michalski as a sole trader. For privacy questions, contact: <a href="mailto:sortd.help@proton.me">sortd.help@proton.me</a></p>
+
+    <h2>Data Stored On Your Device</h2>
+    <p>Your entries, document photos, scan history and app settings are stored only on your device, in files protected by iOS file-level encryption. Sortd does not operate any servers or databases that hold your personal data. Your data is included in your device's iCloud backup if you have iCloud Backup turned on in iOS Settings.</p>
+
+    <h2>Passwords &amp; Logins</h2>
+    <p>Entries in the Passwords &amp; Logins section are stored in the iOS Keychain — Apple's secure credential storage, the same system used by Safari and every other app that saves passwords. Keychain entries are hardware-encrypted and isolated from the rest of the app's data. They are never included in data exports and are never sent to any external service, including Anthropic.</p>
+
+    <h2>AI Document Scanning</h2>
+    <p>When you scan or import a document, on-device OCR extracts text from the image. That extracted text (never the image itself) is sent to Anthropic's API to identify the document type, key dates, and details. This processing is necessary to provide the scanning feature. Anthropic acts as our data processor and does not use API data for model training. API operational logs are deleted after 30 days.</p>
+    <p>Anthropic is based in the United States. We rely on the <strong>UK International Data Transfer Agreement (IDTA)</strong> as the mechanism for transferring personal data from the UK to the US.</p>
+
+    <h2>AI Chat (Sortd AI)</h2>
+    <p>When you send a message in the AI chat tab, your message and a summary of your saved entries are sent to Anthropic's API to generate a response. The summary includes the name, section, dates, and notes from your entries.</p>
+    <p>Entries you have marked as Private, all Health section entries, and all Passwords &amp; Logins entries are always excluded and are never sent to any external service.</p>
+
+    <h2>Home Screen AI Insight</h2>
+    <p>Once per day, Sortd may generate a proactive insight about your entries — for example, flagging something that's about to expire. This sends a brief summary of your entries to Anthropic's API to generate the suggestion. The same exclusions apply: Private, Health, and Passwords &amp; Logins entries are never included. You can dismiss these suggestions and they will not reappear until the following day.</p>
+
+    <h2>Feedback</h2>
+    <p>If you submit feedback using the Send Feedback form, your message is sent to Formspree (formspree.io), a third-party provider based in the United States. Please do not include passwords or sensitive personal details in feedback messages.</p>
+
+    <h2>Notifications</h2>
+    <p>Sortd can send local notifications to remind you about upcoming dates. These are generated entirely on your device and are not processed by any external server.</p>
+
+    <h2>What We Do Not Do</h2>
+    <ul>
+      <li>We do not collect analytics or usage data.</li>
+      <li>We do not use advertising or tracking SDKs.</li>
+      <li>We do not require an account to use the app.</li>
+      <li>We do not sell or share your personal data.</li>
+      <li>We do not have access to your entries, notes, photos, or Passwords &amp; Logins.</li>
+    </ul>
+
+    <h2>In-App Purchases</h2>
+    <p>Sortd Pro is available as a monthly subscription (£1.99/month), annual subscription (£9.99/year), or one-time lifetime purchase (£29.99). All transactions are processed by Apple through the App Store under Apple's privacy policy. We receive only confirmation that a purchase was made — we never receive payment details, your name, or any financial information.</p>
+
+    <h2>Lawful Basis for Processing (UK GDPR)</h2>
+    <p>AI scanning, AI chat, and the home screen AI insight: performance of the contract between you and Sortd (you have requested these features). Device storage: necessary to provide the app. We do not process your data for marketing, profiling, or advertising.</p>
+
+    <h2>Special Category Data</h2>
+    <p>If you store health information (prescriptions, blood type, NHS number, etc.) in the Health section, this is special category data under UK GDPR Article 9. We process it on the basis of your explicit consent, granted by choosing to store it. Health section entries are never sent to any third party.</p>
+
+    <h2>Retention</h2>
+    <p>Your data remains on your device until you delete individual entries or use "Delete all data" in Settings. Deleting the app permanently removes all locally stored data. Anthropic deletes API logs after 30 days.</p>
+
+    <h2>Your Rights Under UK GDPR</h2>
+    <p>You have the right to:</p>
+    <ul>
+      <li>Access your data — use Export in Settings</li>
+      <li>Correct or delete your data — edit or delete entries, or use "Delete all data" in Settings</li>
+      <li>Restrict or object to processing</li>
+      <li>Data portability — use Export in Settings</li>
+    </ul>
+    <p>Contact us at <a href="mailto:sortd.help@proton.me">sortd.help@proton.me</a> to exercise any right.</p>
+
+    <h2>Right to Complain</h2>
+    <p>You have the right to lodge a complaint with the UK Information Commissioner's Office (ICO) at <a href="https://ico.org.uk" target="_blank">ico.org.uk</a> or by calling 0303 123 1113.</p>
+
+    <h2>Children's Privacy</h2>
+    <p>Sortd is rated 4+ and does not knowingly collect personal data from children. All data is stored locally on the device.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>If we make material changes, we will update the date at the top of this page. Continued use of Sortd after changes are posted means you accept the updated policy.</p>
+
+    <hr>
+
+    <div class="footer">
+      <p>For privacy questions or to exercise your data subject rights: <a href="mailto:sortd.help@proton.me">sortd.help@proton.me</a></p>
+      <p style="margin-top: 8px;">© 2026 Sortd. All rights reserved.</p>
+    </div>
+
+  </div>
+</body>
+</html>
